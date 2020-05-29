@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jimmy Li - Portfolio</title>
+    <style>
+        .header-class {
+            background-color: yellow;
+        }
+
+        .body-class {
+            background-color: green;
+            width: 100%;
+            height: 700px;
+            overflow: scroll;
+        }
+
+        .toolbar-class {
+            background-color: aqua;
+            margin: 10px;
+        }
+
+        .toolbar-btn {
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .about-me-div {
+            display: none;
+            background-color: aquamarine;
+        }
+
+        .projects-div {
+            display: block;
+            background-color: cornflowerblue;
+        }
+
+        .cv-div {
+            display: none;
+            background-color: aliceblue;
+        }
+
+        .linkedin-div {
+            display: none;
+            background-color: beige;
+        }
+
+        .github-div {
+            display: none;
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+<div class="header-class">
+    <span style="font-size: 30px; font-weight: bold;">Jimmy Li - Portfolio</span>
+    <div class="toolbar-class">
+        <div class="toolbar-btn" onclick="toolbarClick('PROJECTS')">| Projects |</div>
+        <div class="toolbar-btn" onclick="toolbarClick('ABOUT_ME')">About me |</div>
+        <div class="toolbar-btn" onclick="toolbarClick('CV')">CV (.pdf Download) |</div>
+        <div class="toolbar-btn" onclick="toolbarClick('LINKEDIN')">LinkedIn |</div>
+        <div class="toolbar-btn" onclick="toolbarClick('GITHUB')"> github |</div>
+    </div>
+</div>
+<div class="body-class">
+    <div id="projects-div" class="projects-div">
+        <div>"jlmalloc" - Memory Allocator in C</div>
+        <div>"routes" - General Layout Designer & Path Optimizer</div>
+        <div>"render" - C++ OpenGL Model Rendering Engine</div>
+        <div>"svgraph" - Browser-Based Discrete Mathematical Graphing Tool</div>
+        <div>"MapReduce" - MapReduce with Key-Value Data Storage</div>
+        <div>"sfg-vis" - Signal Flow Graph Overlay & Visualizer</div>
+        <div>"paint" - Portable "MS Paint"-like Drawing Tool</div>
+    </div>
+    <div id="about-me-div" class="about-me-div"></div>
+    <div id="cv-div" class="cv-div">c</div>
+    <div id="linkedin-div" class="linkedin-div">d</div>
+    <div id="github-div" class="github-div">e</div>
+</div>
+
+<script type="application/javascript">
+    function toolbarClick(evt) {
+      const get = id => document.getElementById(id);
+      const set = id => {
+        get("projects-div").style.display = "none";
+        get("about-me-div").style.display = "none";
+        get("cv-div").style.display = "none";
+        get("linkedin-div").style.display = "none";
+        get("github-div").style.display = "none";
+
+        // Set one of them to visible
+        get(id).style.display = "block";
+      };
+
+      switch (evt) {
+        case 'PROJECTS':
+          set("projects-div");
+          break;
+        case 'ABOUT_ME':
+          set("about-me-div");
+          break;
+        case 'CV':
+          set("cv-div");
+          break;
+        case 'LINKEDIN':
+          set("linkedin-div");
+          break;
+        case 'GITHUB':
+          set("github-div");
+          break;
+        default:
+      }
+    }
+</script>
+</body>
+</html>
