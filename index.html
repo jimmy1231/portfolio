@@ -192,9 +192,14 @@
                             Naturally, shortest path is implemented using <i>Dijkstra's Algorithm</i>. We decided to approach TSP by: (1)
                             Performing the <i>Nearest Neighbor</i> algorithm to find an initial solution; (2) To
                             improve upon the initial solution, a global minimum can be closely approximated by
-                            using <i>Simulated Annealing</i>, which iteratively and randomly performs local improvement
+                            using <i>Simulated Annealing (SA)</i>, which iteratively and randomly performs local improvement
                             using the <i>2-Opt</i> algorithm until improvements can no longer be made.
                         </p>
+                        <ul>
+                            <li>2-Opt: 10-15% improvement over Nearest Neighbor</li>
+                            <li>SA: 20-30% improvement over 2-Opt</li>
+                            <li>SA within 5% of Held-Karpe Lower Bound (estimate of optimal tour length)</li>
+                        </ul>
                     </div>
                 </td>
             </tr>
