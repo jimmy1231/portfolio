@@ -5,18 +5,14 @@
     <title>Jimmy Li - Portfolio</title>
     <style>
         .header-class {
-            background-color: yellow;
         }
 
         .body-class {
-            background-color: green;
             width: 100%;
             height: 700px;
-            overflow: scroll;
         }
 
         .toolbar-class {
-            background-color: aqua;
             margin: 10px;
         }
 
@@ -25,35 +21,59 @@
             display: inline-block;
         }
 
+        .toolbar-btn:hover {
+            cursor: pointer;
+        }
+
         .about-me-div {
             display: none;
-            background-color: aquamarine;
         }
 
         .projects-div {
             display: block;
-            background-color: cornflowerblue;
         }
 
         .cv-div {
             display: none;
-            background-color: aliceblue;
         }
 
         .linkedin-div {
             display: none;
-            background-color: beige;
         }
 
         .github-div {
             display: none;
-            background-color: blanchedalmond;
+        }
+
+        table {
+            border: 1px solid black;
+        }
+
+        tr {
+            height: 50px;
+        }
+
+        .project-title {
+            width: 20%;
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        .project-desc {
+            border: 1px solid black;
+        }
+
+        .title-img {
+            max-width: 300px;
+            max-height: 300px;
+            width: auto;
+            height: auto;
         }
     </style>
 </head>
 <body>
 <div class="header-class">
-    <span style="font-size: 30px; font-weight: bold;">Jimmy Li - Portfolio</span>
+    <h1>Jimmy Li - Portfolio</h1>
     <div class="toolbar-class">
         <div class="toolbar-btn" onclick="toolbarClick('PROJECTS')">| Projects |</div>
         <div class="toolbar-btn" onclick="toolbarClick('ABOUT_ME')">About me |</div>
@@ -64,18 +84,61 @@
 </div>
 <div class="body-class">
     <div id="projects-div" class="projects-div">
-        <div>"jlmalloc" - Memory Allocator in C</div>
-        <div>"routes" - General Layout Designer & Path Optimizer</div>
-        <div>"render" - C++ OpenGL Model Rendering Engine</div>
-        <div>"svgraph" - Browser-Based Discrete Mathematical Graphing Tool</div>
-        <div>"MapReduce" - MapReduce with Key-Value Data Storage</div>
-        <div>"sfg-vis" - Signal Flow Graph Overlay & Visualizer</div>
-        <div>"paint" - Portable "MS Paint"-like Drawing Tool</div>
+        <table>
+            <tr>
+                <td class="project-title">
+                    <div><strong>"jlmalloc"</strong> - Memory Allocator in C</div>
+                    <img src="images/jlmalloc.png" class="title-img">
+                </td>
+                <td class="project-desc">Description</td>
+            </tr>
+            <tr>
+                <td class="project-title">
+                    <div><strong>"routes"</strong> - General Layout Designer & Path Optimizer</div>
+                    <img src="images/routes.png" class="title-img">
+                </td>
+                <td class="project-desc">Description</td>
+            </tr>
+            <tr>
+                <td class="project-title">
+                    <div><strong>"render"</strong> - C++ OpenGL Model Rendering Engine</div>
+                    <img src="images/render.png" class="title-img">
+                </td>
+                <td class="project-desc">Description</td>
+            </tr>
+            <tr>
+                <td class="project-title">
+                    <div><strong>"svgraph"</strong> - Browser-Based Discrete Mathematical Graphing Tool</div>
+                    <img src="images/svgraph.png" class="title-img">
+                </td>
+                <td class="project-desc">Description</td>
+            </tr>
+            <tr>
+                <td class="project-title">
+                    <strong>"MapReduce"</strong> - MapReduce with Key-Value Data Storage
+                </td>
+                <td class="project-desc">Description</td>
+            </tr>
+            <tr>
+                <td class="project-title">
+                    <div><strong>"sfg-vis"</strong> - Signal Flow Graph Overlay & Visualizer</div>
+                    <img src="images/sfg-vis.png" class="title-img">
+                </td>
+                <td class="project-desc">Description</td>
+            </tr>
+            <tr>
+                <td class="project-title">
+                    <div><strong>"paint"</strong> - Portable "MS Paint"-like Drawing Tool</div>
+                    <img src="images/paint.png" class="title-img">
+                </td>
+                <td class="project-desc">Description</td>
+            </tr>
+        </table>
     </div>
-    <div id="about-me-div" class="about-me-div"></div>
-    <div id="cv-div" class="cv-div">c</div>
-    <div id="linkedin-div" class="linkedin-div">d</div>
-    <div id="github-div" class="github-div">e</div>
+    <div id="about-me-div" class="about-me-div">About Me</div>
+    <div id="cv-div" class="cv-div">CV</div>
+    <div id="linkedin-div" class="linkedin-div">LinkedIn</div>
+    <div id="github-div" class="github-div">GitHub</div>
 </div>
 
 <script type="application/javascript">
