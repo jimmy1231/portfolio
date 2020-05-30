@@ -74,6 +74,11 @@
             width: auto;
             height: auto;
         }
+
+        .cv-pdf {
+            color: black;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -82,9 +87,9 @@
     <div class="toolbar-class">
         <div class="toolbar-btn" onclick="toolbarClick('PROJECTS')">| Projects |</div>
         <div class="toolbar-btn" onclick="toolbarClick('ABOUT_ME')">About me |</div>
-        <div class="toolbar-btn" onclick="toolbarClick('CV')">CV (.pdf Download) |</div>
-        <div class="toolbar-btn" onclick="toolbarClick('LINKEDIN')">LinkedIn |</div>
-        <div class="toolbar-btn" onclick="toolbarClick('GITHUB')"> github |</div>
+        <a class="toolbar-btn cv-pdf" href="cdn/jimmy-li.pdf">CV (.pdf Download) |</a>
+        <a class="toolbar-btn cv-pdf" href="https://www.linkedin.com/in/jimmy-li-907969112/">LinkedIn |</a>
+        <a class="toolbar-btn cv-pdf" href="https://github.com/jimmy1231"> github |</a>
     </div>
 </div>
 <div class="body-class">
@@ -117,7 +122,7 @@
                         <br>
                         This allocator is optimized for specific workloads using various techniques such as:
                         <ul>
-                            <li>Preallocation (a technique extensively used in <i>dlmalloc</i></li>
+                            <li>Preallocation (a technique extensively used in <i>dlmalloc</i>)</li>
                             <li>Deferred free</li>
                             <li>On-demand coalescing of free neighbor blocks</li>
                         </ul>
@@ -229,7 +234,12 @@
                     <div>
                         <strong>Description:</strong>
                         <br>
-
+                        Implemented from scratch with Scalar Vector Graphics:
+                        <ul>
+                            <li>Compute and visualize the frequency-variant, time-invariant response of the circuit (Bode plots - phase, magnitude)</li>
+                            <li>Compute and visualize the frequency-invariant, time-variant response of the circuit</li>
+                            <li>Sample input signals as mathematical functions and output as discrete points to be plotted</li>
+                        </ul>
                     </div>
                 </td>
             </tr>
@@ -251,8 +261,24 @@
                     <strong>Timeline:</strong> <span>January, 2020 - April, 2020</span>
                     <div>
                         <strong>Description:</strong>
-                        <br>
-
+                        <p>
+                            <i>MapReduce</i> is a Single-Instruction-Multiple-Data (SIMD) distributed processing
+                            framework developed by Google. Its advantages are providing a framework which leverages
+                            Google's massive compute infrastructure to enable the processing of massive workloads (in
+                            the order of terabytes) across thousands of machines while guaranteeing reliability.
+                        </p>
+                        <p>
+                            This project is an imitation of <i>MapReduce</i>. It first implements a distributed
+                            Key-Value storage system, which is replicated at least 3 times, and available up to
+                            half of the total number of active nodes in the network. MapReduce, then, is placed atop
+                            this reliable, distributed Key-Value store (much like Google's MapReduce is placed atop
+                            the Google File System).
+                        </p>
+                        <p>
+                            Storage servers also serve as MapReduce workers. All communication occurs over reliable
+                            TCP channel. Please see the report for implementation details as well as performance
+                            testing results.
+                        </p>
                     </div>
                 </td>
             </tr>
@@ -274,8 +300,17 @@
                     <strong>Timeline:</strong> <span>February, 2020 - April, 2020</span>
                     <div>
                         <strong>Description:</strong>
-                        <br>
-
+                        <p>
+                            The function of the Circuit Schematic Visualizer is to render each circuit component at
+                            predefined positions and orientations. Separate sub-modules
+                            were created for each unique component including: resistor, capacitor, dependent/independent
+                            voltage & current sources, wires, and ground nodes.
+                        </p>
+                        <p>
+                            The SFG Overlay solves the curve-generation problem by employing a heuristical variation of
+                            Bézier curves, a polynomial interpolation technique where a curve is procedurally generated
+                            based on a set of predefined control points.
+                        </p>
                     </div>
                 </td>
             </tr>
@@ -297,8 +332,34 @@
                     <strong>Timeline:</strong> <span>April, 2020</span>
                     <div>
                         <strong>Description:</strong>
-                        <br>
-
+                        Closely resembling MS-Paint, but works for Mac and Linux.
+                        Features include:
+                        <ul>
+                            <li>Copy + Paste pictures onto canvas</li>
+                            <li>Draw on canvas</li>
+                            <li>
+                                Tools:
+                                <ul>
+                                    <li>Pencil (free hand)</li>
+                                    <li>Line</li>
+                                    <li>Circle</li>
+                                    <li>Rectangle</li>
+                                    <li>Colour selection</li>
+                                    <li>Fill</li>
+                                    <li>Eraser tool</li>
+                                </ul>
+                            </li>
+                            <li>Resizable canvas</li>
+                            <li>
+                                Selection tool:
+                                <ul>
+                                    <li>Rectangle</li>
+                                    <li>Circle</li>
+                                    <li>Lasso (Freehand)</li>
+                                </ul>
+                            </li>
+                            <li>Undo/Redo</li>
+                        </ul>
                     </div>
                 </td>
             </tr>
