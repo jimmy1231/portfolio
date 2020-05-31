@@ -195,6 +195,11 @@
                             using <i>Simulated Annealing (SA)</i>, which iteratively and randomly performs local improvement
                             using the <i>2-Opt</i> algorithm until improvements can no longer be made.
                         </p>
+                        <p>
+                            To benchmark performance of <i>2-opt</i> and SA implementations, an approximated Held-Karp
+                            algorithm (which yields a lower-bound distance on the optimal TSP solution) was implemented.
+                            The algorithm was implemented using the top-down dynamic programming approach.
+                        </p>
                         <ul>
                             <li>2-Opt: 10-15% improvement over Nearest Neighbor</li>
                             <li>SA: 20-30% improvement over 2-Opt</li>
